@@ -1,0 +1,11 @@
+h1 {                     /* selector: all p elements */
+    color: #ed9d33dd;      /* property: value; */
+}
+
+/* Styles for Activity 01 */
+body {
+    background-color: #ffffff;
+    color: #14253a;
+    font-family: Arial, sans-serif;
+}
+
