@@ -1,0 +1,7 @@
+css
+:root {
+  --example-space: 1rem;
+}
+.example {
+  padding: var(--example-space);
+}
