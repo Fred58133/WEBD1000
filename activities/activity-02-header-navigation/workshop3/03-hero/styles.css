@@ -40,19 +40,27 @@
     text-decoration: none;
     font-weight: bold;
 }
+s
+.cta {
+    display: inline-block;
+    padding: var(--space-small) var(--space-medium);
+    border-radius: var(--radius-button);
+    text-decoration: none;
+}
 
 .cta-primary {
-    background-color: #004780;
-    color: #ffffff;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.cta-primary:hover {
+    background-color: var(--color-primary-dark);
 }
 
 .cta-secondary {
-    background-color: #ffffff;
-    color: #004780;
-}
-
-.cta:hover {
-    text-decoration: underline;
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
 }
 
 .cta:focus-visible {
