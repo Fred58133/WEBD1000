@@ -1,0 +1,251 @@
+/* Reusable design decisions for this activity */
+:root {
+    /* Colours */
+    --color-primary: #004780;
+    --color-primary-dark: #00345e;
+    --color-text: #14253a;
+    --color-background: #edf2f7;
+    --color-surface: #ffffff;
+    --color-border: #cbd5e1;
+
+    /* Typography */
+    --font-body: Arial, Helvetica, sans-serif;
+    --font-size-body: 1rem;
+    --font-size-heading: 2rem;
+
+    /* Spacing */
+    --space-small: 0.5rem;
+    --space-medium: 1rem;
+    --space-large: 2rem;
+
+    /* Shape */
+    --radius-button: 0.5rem;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    margin: 0;
+}
+
+.site-header {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.site-name {
+    color: #004780;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    padding-left: 20px;
+}
+
+nav a {
+    color: #004780;
+}
+
+nav a:hover {
+    color: #b45309;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    color: #004780;
+}
+
+section {
+    margin-bottom: 32px;
+}
+
+.hero {
+    padding: 2rem;
+}
+
+/* Activity 03: Hero section */
+.hero {
+    background-color: var(--color-surface);
+    padding: var(--space-large);
+}
+
+.hero h1 {
+    color: var(--color-primary);
+    font-size: var(--font-size-heading);
+}
+
+.hero-content {
+    max-width: 42rem;
+}
+
+.hero-eyebrow {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.cta {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid #004780;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+s
+.cta {
+    display: inline-block;
+    padding: var(--space-small) var(--space-medium);
+    border-radius: var(--radius-button);
+    text-decoration: none;
+}
+
+.cta-primary {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.cta-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.cta-secondary {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.cta:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+.hero-media {
+    margin-top: 1.5rem;
+}
+
+.hero-media img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* WS03-05: Desktop header and navigation */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.header-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-medium, 1rem);
+    max-width: 70rem;
+    margin-inline: auto;
+}
+
+.site-brand {
+    color: var(--color-primary, #004780);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: var(--space-large, 2rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation a {
+    color: var(--color-primary, #004780);
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.site-navigation a:hover {
+    text-decoration: underline;
+}
+
+.site-navigation a:focus-visible,
+.site-brand:focus-visible {
+    outline: 3px solid #f37327;
+    outline-offset: 3px;
+}
+
+/* Default: desktop navigation is visible; mobile menu is hidden. */
+.mobile-menu {
+    display: none;
+}
+
+/* Narrow screens: switch from desktop links to the mobile menu. */
+@media (max-width: 42rem) {
+    .desktop-navigation {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.mobile-menu summary {
+    cursor: pointer;
+    padding: var(--space-small, 0.5rem);
+    color: var(--color-primary, #004780);
+    font-weight: bold;
+}
+
+.mobile-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: var(--space-small, 0.5rem) 0;
+}
+
+.mobile-navigation li + li {
+    margin-top: var(--space-small, 0.5rem);
+}
+
+.mobile-navigation a {
+    display: block;
+    padding: var(--space-small, 0.5rem);
+    color: var(--color-primary, #004780);
+    text-decoration: none;
+}
+
+.mobile-navigation a:hover {
+    text-decoration: underline;
+}
+
+.mobile-menu summary:focus-visible,
+.mobile-navigation a:focus-visible {
+    outline: 3px solid var(--color-primary, #004780);
+    outline-offset: 3px;
+}
