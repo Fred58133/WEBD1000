@@ -1,12 +1,55 @@
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    margin: 0;
+}
+
+.site-header {
+    background-color: var(--color-surface);
+    padding: var(--space-medium);
+}
+
+.site-name {
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    padding-left: 20px;
+}
+
+nav a {
+    color: var(--color-primary);
+}
+
+nav a:hover {
+    color: var(--color-primary-dark);
+}
+
+main {
+    padding: var(--space-medium);
+}
+
+h1 {
+    color: var(--color-primary);
+}
+
+section {
+    margin-bottom: var(--space-large);
+}
+
 .hero {
-    padding: 2rem;
+    padding: var(--space-large);
 }
 
 /* Activity 03: Hero section */
 .hero {
-    background-color: #edf2f7;
-    padding: 2rem;
-    border-radius: 12px;
+    background-color: var(--color-surface);
+    padding: var(--space-large);
+    border-radius: var(--radius-button);
 }
 
 .hero-content {
@@ -14,7 +57,7 @@
 }
 
 .hero-eyebrow {
-    color: #004780;
+    color: var(--color-primary);
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -40,7 +83,7 @@
     text-decoration: none;
     font-weight: bold;
 }
-s
+
 .cta {
     display: inline-block;
     padding: var(--space-small) var(--space-medium);
